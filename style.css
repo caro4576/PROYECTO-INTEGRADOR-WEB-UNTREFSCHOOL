@@ -1,0 +1,230 @@
+/* Variables de color */
+:root {
+  --naranja: #FC7300;
+  --verde-agua: #1F8A70;
+  --azul-oscuro: #00425A;
+  --negro-suave: #181823;
+  --gris-claro: #EFF5F5;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--azul-oscuro);
+  color: var(--gris-claro);
+}
+
+header {
+  background-image: url(img/chicos.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  height: 410px;
+  margin-bottom: 2rem;
+  padding: 2rem 0;
+}
+
+@media (max-width: 480px) {
+  header {
+    height: 250px; /* menos alto en móviles */
+    background-position: center center; /* centre la imagen */
+  }
+}
+
+
+header h1 {
+  font-size: 2rem;
+  margin: 0;
+  color: var(--naranja);
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+}
+
+.nav-bg {
+  background-color: var(--azul-oscuro);
+}
+
+.navegacion-principal {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem;
+}
+
+.navegacion-principal a {
+  color: var(--gris-claro);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+}
+
+.navegacion-principal a:hover {
+  background-color: var(--naranja);
+  border-radius: 5px;
+}
+
+main {
+  padding: 2rem 1rem;
+  max-width: 1100px;
+  margin: auto;
+}
+
+section {
+  background-color: var(--verde-agua);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.quienes-somos img,
+.porque-elegirnos img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.quienes-somos p,
+.porque-elegirnos p {
+  font-size: 1.2rem;
+  color: var(--gris-claro);
+  margin-top: 1rem;
+}
+
+.propuesta-educativa h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.contenedor-propuestas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.contenedor-propuestas div {
+  flex: 1 1 200px;
+  text-align: center;
+}
+
+.contenedor-propuestas img {
+  width: 100px;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
+/* Formulario de contacto */
+
+.boton-inicio {
+  display: inline-block;
+  background-color: var(--gris-claro);
+  color: var(--negro-suave);
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  margin: 1rem;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.boton-inicio:hover {
+  background-color: var(--naranja);
+  color: white;
+}
+
+.formulario-contacto {
+  max-width: 400px;
+  margin: 2rem auto;
+  background-color: var(--verde-agua);
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.formulario-contacto h2 {
+  text-align: center;
+  color: white;
+}
+
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  border: none;
+  margin-bottom: 1rem;
+}
+
+button[type="submit"] {
+  background-color: var(--azul-oscuro);
+  color: var(--gris-claro);
+  border: none;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+button[type="submit"]:hover {
+  background-color: var(--naranja);
+}
+
+/* Footer */
+
+footer {
+  background-color: var(--azul-oscuro);
+  text-align: center;
+  padding: 2rem 1rem;
+  color: var(--gris-claro);
+}
+
+footer .logo {
+  width: 20px;
+  margin: 0 0.5rem;
+  vertical-align: middle;
+}
+
+/* Media queries */
+
+@media (max-width: 768px) {
+  .navegacion-principal {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contenedor-propuestas {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .quienes-somos p,
+  .porque-elegirnos p {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .formulario-contacto {
+    margin: 1rem;
+  }
+
+  .navegacion-principal a {
+    font-size: 1rem;
+  }
+
+  footer .logo {
+    display: inline-block;
+    margin: 0.5rem;
+  }
+}
